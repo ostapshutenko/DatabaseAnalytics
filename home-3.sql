@@ -74,7 +74,7 @@ check_or < 3
 
 
 select (select (select sum(n.price_per_month) from
-(select distinct user_id, sum(price)/datediff( max(o_date), min(o_date))*30 as price_per_month, max(o_date) as last_date, count(id_o) as check_or from orders5 o 
+(select distinct user_id, sum(price)/datediff( '2017-02-01', min(o_date))*30 as price_per_month, max(o_date) as last_date, count(id_o) as check_or from orders5 o 
 group by user_id
 having last_date >= '2017-02-01'
 and 
@@ -84,7 +84,7 @@ check_or > 2) n)
 +
 (select sum(n.price_per_month) from
 (
-select distinct user_id, sum(price)/datediff( max(o_date), min(o_date))*30 as price_per_month, max(o_date) as last_date, count(id_o) as check_or from orders5 o 
+select distinct user_id, sum(price)/datediff( '2017-02-01', min(o_date))*30 as price_per_month, max(o_date) as last_date, count(id_o) as check_or from orders5 o 
 group by user_id
 having last_date < '2017-02-01' 
 and 
