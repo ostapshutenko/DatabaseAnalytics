@@ -1,0 +1,247 @@
+use db;
+
+/*CREATE TABLE `clients` (
+  `id_client` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `limit_sum` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id_client`)
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+*/
+INSERT INTO `clients` (`id_client`, `limit_sum`) VALUES ('1', 10262);
+INSERT INTO `clients` (`id_client`, `limit_sum`) VALUES ('2', 69150831);
+INSERT INTO `clients` (`id_client`, `limit_sum`) VALUES ('3', 0);
+INSERT INTO `clients` (`id_client`, `limit_sum`) VALUES ('4', 348);
+INSERT INTO `clients` (`id_client`, `limit_sum`) VALUES ('5', 13522826);
+INSERT INTO `clients` (`id_client`, `limit_sum`) VALUES ('6', 0);
+INSERT INTO `clients` (`id_client`, `limit_sum`) VALUES ('7', 20413644);
+INSERT INTO `clients` (`id_client`, `limit_sum`) VALUES ('8', 120844);
+INSERT INTO `clients` (`id_client`, `limit_sum`) VALUES ('9', 0);
+INSERT INTO `clients` (`id_client`, `limit_sum`) VALUES ('10', 0);
+INSERT INTO `clients` (`id_client`, `limit_sum`) VALUES ('11', 0);
+INSERT INTO `clients` (`id_client`, `limit_sum`) VALUES ('12', 13934611);
+INSERT INTO `clients` (`id_client`, `limit_sum`) VALUES ('13', 35);
+INSERT INTO `clients` (`id_client`, `limit_sum`) VALUES ('14', 0);
+INSERT INTO `clients` (`id_client`, `limit_sum`) VALUES ('15', 4245);
+INSERT INTO `clients` (`id_client`, `limit_sum`) VALUES ('16', 498);
+INSERT INTO `clients` (`id_client`, `limit_sum`) VALUES ('17', 134326);
+INSERT INTO `clients` (`id_client`, `limit_sum`) VALUES ('18', 13);
+INSERT INTO `clients` (`id_client`, `limit_sum`) VALUES ('19', 4143);
+INSERT INTO `clients` (`id_client`, `limit_sum`) VALUES ('20', 19);
+
+
+#
+# TABLE STRUCTURE FOR: transactions
+#
+
+/*DROP TABLE IF EXISTS `transactions`;
+
+CREATE TABLE `transactions` (
+  `id_transaction` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `id_client` bigint(20) unsigned DEFAULT NULL,
+  `transaction_date` date DEFAULT NULL,
+  `transaction_time` time DEFAULT NULL,
+  `transaction_sum` bigint(20) DEFAULT NULL,
+  PRIMARY KEY (`id_transaction`),
+  KEY `id_client` (`id_client`),
+  CONSTRAINT `transactions_ibfk_1` FOREIGN KEY (`id_client`) REFERENCES `clients` (`id_client`)
+) ENGINE=InnoDB AUTO_INCREMENT=201 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+*/
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('1', '1', '1992-02-18', '07:27:24', '-119');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('2', '2', '2004-06-08', '18:22:25', '-530');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('3', '3', '1971-01-27', '15:49:53', '101');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('4', '4', '1991-12-23', '04:45:16', '966');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('5', '5', '1974-07-08', '02:20:22', '-258');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('6', '6', '2008-03-02', '02:20:42', '642');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('7', '7', '1970-05-08', '10:05:45', '642');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('8', '8', '1981-04-24', '20:50:31', '-468');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('9', '9', '1979-03-17', '23:17:02', '833');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('10', '10', '1986-03-03', '01:05:50', '95');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('11', '11', '1992-02-23', '00:07:26', '-427');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('12', '12', '1982-07-23', '02:14:16', '-530');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('13', '13', '2001-05-22', '12:11:53', '-180');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('14', '14', '2018-09-18', '12:32:17', '-306');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('15', '15', '1991-02-14', '09:27:08', '-756');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('16', '16', '2014-03-22', '13:45:21', '732');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('17', '17', '1989-07-29', '08:06:40', '-222');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('18', '18', '2011-10-08', '23:15:59', '45');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('19', '19', '2017-04-07', '13:20:21', '0');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('20', '20', '2012-07-11', '06:26:55', '-304');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('21', '1', '2018-01-01', '14:53:37', '588');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('22', '2', '1972-10-09', '18:15:12', '241');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('23', '3', '1974-05-22', '10:50:26', '-660');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('24', '4', '2004-06-03', '15:19:57', '60');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('25', '5', '2011-11-01', '19:40:22', '-368');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('26', '6', '1974-04-19', '17:12:45', '-494');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('27', '7', '1982-08-26', '04:09:55', '317');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('28', '8', '1971-11-26', '19:58:46', '363');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('29', '9', '1982-06-06', '23:48:25', '-580');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('30', '10', '1971-02-05', '16:37:00', '-830');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('31', '11', '1995-10-24', '23:41:01', '-667');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('32', '12', '1982-09-19', '04:27:57', '559');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('33', '13', '1974-01-04', '04:25:29', '798');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('34', '14', '1998-09-17', '01:09:31', '209');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('35', '15', '1985-06-16', '01:32:28', '769');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('36', '16', '1997-09-11', '19:24:45', '14');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('37', '17', '1989-07-10', '22:18:55', '177');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('38', '18', '1991-12-26', '07:57:39', '-722');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('39', '19', '1973-07-04', '07:08:21', '415');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('40', '20', '1973-08-27', '13:48:29', '-132');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('41', '1', '2019-11-20', '20:13:16', '731');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('42', '2', '2006-04-09', '02:28:18', '369');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('43', '3', '1983-10-06', '22:54:20', '572');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('44', '4', '2009-11-27', '21:15:27', '425');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('45', '5', '1975-02-05', '16:12:11', '-875');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('46', '6', '1991-02-08', '02:53:32', '653');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('47', '7', '1984-07-20', '11:13:59', '61');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('48', '8', '2010-07-04', '01:29:19', '-613');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('49', '9', '1977-06-11', '01:47:21', '-362');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('50', '10', '1974-01-30', '20:07:35', '-906');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('51', '11', '1978-06-09', '00:47:04', '-507');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('52', '12', '2009-02-19', '12:56:36', '-683');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('53', '13', '2010-07-21', '02:15:51', '-487');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('54', '14', '2001-04-03', '17:22:50', '-217');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('55', '15', '1984-08-26', '00:29:27', '280');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('56', '16', '1988-05-21', '08:08:49', '285');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('57', '17', '2002-09-20', '16:40:02', '-879');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('58', '18', '1982-11-01', '04:14:03', '-133');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('59', '19', '2001-11-02', '03:01:10', '-761');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('60', '20', '2000-01-15', '05:31:45', '-522');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('61', '1', '2002-10-27', '16:44:24', '527');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('62', '2', '1999-02-28', '04:48:28', '-718');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('63', '3', '2012-04-28', '17:15:09', '-955');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('64', '4', '1987-08-23', '23:21:21', '-840');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('65', '5', '1977-05-20', '10:59:04', '-84');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('66', '6', '2004-08-28', '11:07:08', '-114');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('67', '7', '1971-06-24', '17:53:08', '-433');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('68', '8', '1975-05-21', '21:39:41', '-1');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('69', '9', '1978-12-16', '21:34:05', '735');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('70', '10', '2010-12-16', '21:22:07', '-7');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('71', '11', '1987-04-24', '01:31:35', '267');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('72', '12', '2008-05-11', '22:16:39', '-630');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('73', '13', '1996-09-18', '15:54:19', '151');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('74', '14', '2004-05-25', '06:16:31', '-660');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('75', '15', '1992-10-24', '07:42:28', '436');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('76', '16', '1988-01-07', '20:43:27', '-730');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('77', '17', '2003-05-03', '21:57:39', '-805');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('78', '18', '1975-10-07', '14:57:33', '-98');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('79', '19', '1991-02-09', '22:16:46', '-573');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('80', '20', '2010-09-21', '22:06:54', '604');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('81', '1', '2006-03-04', '02:33:10', '-405');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('82', '2', '1983-10-08', '06:27:24', '-726');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('83', '3', '1973-03-24', '01:25:06', '433');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('84', '4', '1992-05-24', '09:39:08', '510');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('85', '5', '1997-11-26', '06:44:26', '6');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('86', '6', '1972-06-20', '17:01:46', '434');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('87', '7', '1990-04-07', '09:15:53', '140');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('88', '8', '1996-04-11', '14:44:59', '-23');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('89', '9', '1975-09-24', '22:12:26', '201');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('90', '10', '1978-10-13', '19:27:31', '-616');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('91', '11', '2019-08-12', '18:54:07', '438');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('92', '12', '1996-07-11', '04:27:05', '805');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('93', '13', '1992-03-26', '22:30:15', '181');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('94', '14', '1983-05-21', '04:00:20', '533');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('95', '15', '1972-01-18', '17:01:36', '357');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('96', '16', '1990-02-24', '07:37:42', '-260');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('97', '17', '2008-08-27', '08:01:44', '137');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('98', '18', '1983-01-16', '02:55:27', '747');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('99', '19', '1970-04-03', '01:49:53', '711');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('100', '20', '2013-05-22', '18:27:51', '533');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('101', '1', '2003-01-13', '22:27:45', '658');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('102', '2', '1997-01-15', '04:33:14', '-722');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('103', '3', '2014-04-05', '08:58:59', '-304');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('104', '4', '2008-05-07', '04:44:42', '-878');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('105', '5', '2018-12-20', '09:40:53', '571');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('106', '6', '1979-08-19', '17:45:17', '6');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('107', '7', '1974-09-18', '03:35:40', '-971');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('108', '8', '1986-06-21', '01:39:39', '989');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('109', '9', '1987-05-27', '17:32:38', '186');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('110', '10', '1977-02-11', '20:30:36', '620');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('111', '11', '1987-01-13', '00:06:51', '-657');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('112', '12', '1991-10-29', '11:06:49', '-515');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('113', '13', '1990-02-10', '09:03:42', '-3');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('114', '14', '2012-05-23', '06:36:14', '161');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('115', '15', '2010-11-25', '03:50:40', '-905');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('116', '16', '1993-03-30', '11:27:12', '-831');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('117', '17', '1975-01-08', '22:46:04', '-657');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('118', '18', '2000-09-23', '17:47:51', '-653');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('119', '19', '1996-08-05', '03:05:12', '-652');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('120', '20', '1986-03-29', '18:38:05', '796');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('121', '1', '1988-04-06', '16:53:02', '277');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('122', '2', '1985-04-17', '13:33:11', '-977');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('123', '3', '2016-03-15', '08:53:00', '-371');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('124', '4', '1999-02-02', '20:58:53', '838');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('125', '5', '1997-03-10', '20:02:12', '112');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('126', '6', '1979-12-19', '14:02:33', '768');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('127', '7', '1992-02-22', '19:00:31', '-20');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('128', '8', '1997-12-04', '00:57:48', '-738');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('129', '9', '1980-11-12', '01:56:29', '-277');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('130', '10', '1991-04-13', '07:03:07', '3');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('131', '11', '2019-03-17', '09:38:24', '727');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('132', '12', '1988-01-21', '01:32:22', '317');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('133', '13', '2011-09-02', '13:01:09', '756');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('134', '14', '2019-05-25', '18:47:49', '975');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('135', '15', '1970-08-01', '07:53:23', '-866');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('136', '16', '2013-06-06', '13:24:51', '-803');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('137', '17', '1992-01-03', '14:39:41', '-240');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('138', '18', '1988-05-29', '15:40:00', '-634');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('139', '19', '1987-07-19', '22:30:50', '-546');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('140', '20', '1988-04-22', '18:19:20', '-445');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('141', '1', '2001-12-25', '01:24:46', '-583');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('142', '2', '1986-04-22', '15:12:30', '166');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('143', '3', '1989-07-09', '01:27:17', '406');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('144', '4', '2010-08-09', '15:00:42', '1');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('145', '5', '1987-12-31', '19:39:06', '438');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('146', '6', '1987-08-10', '17:38:55', '-652');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('147', '7', '1975-01-31', '13:50:05', '618');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('148', '8', '1975-10-23', '06:50:01', '919');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('149', '9', '2015-09-22', '22:35:07', '263');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('150', '10', '1970-11-09', '06:27:28', '-148');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('151', '11', '1974-09-17', '10:49:45', '-705');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('152', '12', '2018-06-30', '03:42:17', '-486');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('153', '13', '1996-08-20', '19:09:15', '-519');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('154', '14', '2011-08-23', '17:29:38', '771');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('155', '15', '2011-06-04', '22:03:47', '782');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('156', '16', '2001-12-19', '05:25:49', '112');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('157', '17', '1980-07-12', '04:38:42', '824');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('158', '18', '1977-12-09', '08:00:04', '-662');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('159', '19', '1980-11-01', '14:31:57', '-214');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('160', '20', '1984-03-30', '03:05:43', '-210');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('161', '1', '1971-04-24', '07:41:32', '53');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('162', '2', '2002-06-14', '10:36:33', '445');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('163', '3', '1978-05-20', '13:32:24', '210');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('164', '4', '2017-04-30', '19:07:41', '-333');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('165', '5', '1989-11-15', '16:02:52', '-224');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('166', '6', '1987-12-19', '17:56:47', '-558');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('167', '7', '1981-01-03', '02:01:53', '383');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('168', '8', '2015-08-07', '21:41:04', '372');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('169', '9', '2003-07-10', '01:46:03', '730');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('170', '10', '1978-03-10', '02:15:33', '944');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('171', '11', '1992-05-02', '02:00:15', '-78');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('172', '12', '2018-02-05', '20:36:16', '-607');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('173', '13', '1987-05-24', '16:59:25', '790');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('174', '14', '1983-03-23', '11:11:57', '567');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('175', '15', '1980-02-27', '02:28:42', '101');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('176', '16', '2017-05-04', '00:47:49', '-756');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('177', '17', '1985-11-23', '21:22:07', '-703');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('178', '18', '2013-07-01', '16:31:59', '490');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('179', '19', '2000-05-31', '12:39:18', '-492');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('180', '20', '2002-12-10', '00:41:14', '-115');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('181', '1', '2014-12-10', '23:07:20', '868');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('182', '2', '1996-11-29', '01:45:14', '368');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('183', '3', '2009-09-22', '07:43:34', '363');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('184', '4', '2007-11-29', '20:02:45', '354');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('185', '5', '1987-08-03', '15:43:26', '-346');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('186', '6', '2016-05-02', '16:30:55', '821');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('187', '7', '2014-07-07', '17:47:05', '-748');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('188', '8', '1985-11-02', '01:05:28', '890');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('189', '9', '2007-05-21', '09:25:53', '-879');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('190', '10', '1989-06-24', '06:36:39', '-831');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('191', '11', '1970-06-20', '14:11:37', '-689');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('192', '12', '1971-10-26', '11:26:43', '409');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('193', '13', '2015-08-20', '00:21:46', '-597');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('194', '14', '1971-09-11', '12:10:34', '-30');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('195', '15', '1983-01-20', '23:30:30', '382');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('196', '16', '2018-01-07', '05:50:15', '-871');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('197', '17', '1977-02-15', '12:48:06', '816');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('198', '18', '1987-09-08', '20:25:47', '313');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('199', '19', '2008-12-18', '12:15:03', '-534');
+INSERT INTO `transactions` (`id_transaction`, `id_client`, `transaction_date`, `transaction_time`, `transaction_sum`) VALUES ('200', '20', '2002-03-14', '14:13:29', '655');
